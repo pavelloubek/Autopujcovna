@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Autopujcovna.Views.MainView">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="MainSeznamButton" Text="Seznam" Command="{Binding UkazSeznam}"/>
+            <Button x:Name="MainPridatButton" Text="Přidat" Command="{Binding UkazPridat}"/>
+            <Button x:Name="MainOdebratButton" Text="Odebrat" Command="{Binding UkazOdebrat}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

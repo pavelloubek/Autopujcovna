@@ -4,9 +4,15 @@
              x:Class="Autopujcovna.Views.PridatView">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Název vozidla:" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            <Entry Text="{Binding EntryNazevVozidla}"/>
+            <Label Text="SPZ:" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            <Entry Text="{Binding EntrySPZ}"/>
+            <Label Text="Jméno půjčujícího:" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            <Entry Text="{Binding EntryJmeno}"/>
+            <!-- přidat pak i datumy -->
+            <Button x:Name="UkazMain" Text="Zpět" Command="{Binding UkazMain}"/>
+            <Button x:Name="PotvrditOdebrat" Text="Přidat" Command="{Binding PotvrditOdebrat}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

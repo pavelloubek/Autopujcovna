@@ -6,6 +6,7 @@
         <StackLayout>
             <Label Text="SPZ pro odebrání vozidla:" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
             <Entry Text="{Binding SPZOdebrat}"/>
+            <Button x:Name="UkazMain" Text="Zpět" Command="{Binding UkazMain}"/>
             <Button x:Name="PotvrditOdebrat" Text="Potvrdit" Command="{Binding PotvrditOdebrat}"/>
         </StackLayout>
     </ContentPage.Content>

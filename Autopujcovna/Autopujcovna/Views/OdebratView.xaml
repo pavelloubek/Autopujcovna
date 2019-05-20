@@ -4,9 +4,9 @@
              x:Class="Autopujcovna.Views.OdebratView">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="SPZ pro odebrání vozidla:" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            <Entry Text="{Binding SPZOdebrat}"/>
+            <Button x:Name="PotvrditOdebrat" Text="Potvrdit" Command="{Binding PotvrditOdebrat}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

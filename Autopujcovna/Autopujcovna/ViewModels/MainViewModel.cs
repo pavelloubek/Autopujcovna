@@ -12,12 +12,10 @@ namespace Autopujcovna.ViewModels
         {
             UkazSeznam = new Command(UkazSeznam_e);
             UkazPridat = new Command(UkazPridat_e);
-            UkazOdebrat = new Command(UkazOdebrat_e);
         }
 
         public Command UkazSeznam { get; private set; }
         public Command UkazPridat { get; private set; }
-        public Command UkazOdebrat { get; private set; }
 
         void UkazSeznam_e(object sender)
         {
@@ -27,11 +25,6 @@ namespace Autopujcovna.ViewModels
         void UkazPridat_e(object sender)
         {
             App.Current.MainPage = new NavigationPage(new PridatView());
-        }
-
-        void UkazOdebrat_e(object sender)
-        {
-            App.Current.MainPage = new NavigationPage(new OdebratView());
         }
     }
 }

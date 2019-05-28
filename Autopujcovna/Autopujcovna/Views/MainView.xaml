@@ -6,7 +6,6 @@
         <StackLayout>
             <Button x:Name="MainSeznamButton" Text="Seznam" Command="{Binding UkazSeznam}"/>
             <Button x:Name="MainPridatButton" Text="Přidat" Command="{Binding UkazPridat}"/>
-            <Button x:Name="MainOdebratButton" Text="Odebrat" Command="{Binding UkazOdebrat}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

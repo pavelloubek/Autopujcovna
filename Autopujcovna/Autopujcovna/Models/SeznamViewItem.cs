@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Autopujcovna.ViewModels
+namespace Autopujcovna.Models
 {
-    class SeznamViewModel
+    class SeznamViewItem
     {
-
     }
 }

@@ -16,24 +16,14 @@ namespace Autopujcovna.ViewModels
         }
 
         public Command Odebrat { get; private set; }
-        private List<SeznamViewItem> seznamData;
 
-        public List<SeznamViewItem> SeznamData
+        private void Odebrat_e(object parameter)
         {
-            get => seznamData;
-            set
+            var item = parameter as SeznamViewItem;
+            if (item != null)
             {
-                if (seznamData != value)
-                {
-                    seznamData = value;
-                    OnPropertyChanged(nameof(SeznamData));
-                }
+                seznamData.Remove(item);
             }
-        }
-
-        private void Odebrat_e(object sender)
-        {
-
         }
     }
 }

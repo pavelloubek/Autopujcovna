@@ -1,0 +1,15 @@
+C:\Users\plpav\OneDrive\Plocha\X\PRG\Xamarin\Autopujcovna\Autopujcovna\Autopujcovna\obj\Debug\netstandard2.0\Autopujcovna.csprojAssemblyReference.cache
+C:\Users\plpav\OneDrive\Plocha\X\PRG\Xamarin\Autopujcovna\Autopujcovna\Autopujcovna\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\plpav\OneDrive\Plocha\X\PRG\Xamarin\Autopujcovna\Autopujcovna\Autopujcovna\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\plpav\OneDrive\Plocha\X\PRG\Xamarin\Autopujcovna\Autopujcovna\Autopujcovna\obj\Debug\netstandard2.0\Views\MainView.xaml.g.cs
+C:\Users\plpav\OneDrive\Plocha\X\PRG\Xamarin\Autopujcovna\Autopujcovna\Autopujcovna\obj\Debug\netstandard2.0\Views\PridatView.xaml.g.cs
+C:\Users\plpav\OneDrive\Plocha\X\PRG\Xamarin\Autopujcovna\Autopujcovna\Autopujcovna\obj\Debug\netstandard2.0\Views\SeznamView.xaml.g.cs
+C:\Users\plpav\OneDrive\Plocha\X\PRG\Xamarin\Autopujcovna\Autopujcovna\Autopujcovna\obj\Debug\netstandard2.0\Autopujcovna.csproj.CoreCompileInputs.cache
+C:\Users\plpav\OneDrive\Plocha\X\PRG\Xamarin\Autopujcovna\Autopujcovna\Autopujcovna\obj\Debug\netstandard2.0\Autopujcovna.AssemblyInfoInputs.cache
+C:\Users\plpav\OneDrive\Plocha\X\PRG\Xamarin\Autopujcovna\Autopujcovna\Autopujcovna\obj\Debug\netstandard2.0\Autopujcovna.AssemblyInfo.cs
+C:\Users\plpav\OneDrive\Plocha\X\PRG\Xamarin\Autopujcovna\Autopujcovna\Autopujcovna\bin\Debug\netstandard2.0\Autopujcovna.deps.json
+C:\Users\plpav\OneDrive\Plocha\X\PRG\Xamarin\Autopujcovna\Autopujcovna\Autopujcovna\bin\Debug\netstandard2.0\Autopujcovna.dll
+C:\Users\plpav\OneDrive\Plocha\X\PRG\Xamarin\Autopujcovna\Autopujcovna\Autopujcovna\bin\Debug\netstandard2.0\Autopujcovna.pdb
+C:\Users\plpav\OneDrive\Plocha\X\PRG\Xamarin\Autopujcovna\Autopujcovna\Autopujcovna\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\plpav\OneDrive\Plocha\X\PRG\Xamarin\Autopujcovna\Autopujcovna\Autopujcovna\obj\Debug\netstandard2.0\Autopujcovna.dll
+C:\Users\plpav\OneDrive\Plocha\X\PRG\Xamarin\Autopujcovna\Autopujcovna\Autopujcovna\obj\Debug\netstandard2.0\Autopujcovna.pdb

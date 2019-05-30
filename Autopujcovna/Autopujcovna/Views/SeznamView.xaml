@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Autopujcovna.Views.SeznamView">
-    <ListView ItemsSource="{Binding SeznamViewItem}" CachingStrategy="RecycleElement">
+    <ListView ItemsSource="{Binding SeznamData}" CachingStrategy="RecycleElement">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
@@ -10,6 +10,7 @@
                         <Label Text="{Binding SeznamJmeno}" FontAttributes="Bold" FontSize="Medium"/>
                         <Label Text="{Binding SeznamVozidlo}" FontSize="Small"/>
                         <Label Text="{Binding SeznamSPZ}" FontSize="Small"/>
+                        <Button Text="Odebrat" Command="{Binding Odebrat}" />
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>

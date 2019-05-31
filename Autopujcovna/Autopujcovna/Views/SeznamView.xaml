@@ -16,4 +16,9 @@
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="BackToMainButton" Text="Back" Command="{Binding UkazMain}"/>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

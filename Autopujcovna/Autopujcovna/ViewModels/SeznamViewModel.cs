@@ -13,12 +13,14 @@ namespace Autopujcovna.ViewModels
         public SeznamViewModel()
         {
             Odebrat = new Command(Odebrat_e);
+            UkazMain = new Command(UkazMain_e);
         }
 
         // vím že data by neměli být ve viewmodelu
         private List<SeznamViewItem> seznamData;
 
         public Command Odebrat { get; private set; }
+        public Command UkazMain { get; private set; }
 
         public List<SeznamViewItem> SeznamData
         {
@@ -40,6 +42,12 @@ namespace Autopujcovna.ViewModels
             {
                 seznamData.Remove(item);
             }
+        }
+
+
+        void UkazMain_e(object sender)
+        {
+            App.Current.MainPage = new NavigationPage(new MainView());
         }
     }
 }

@@ -6,11 +6,9 @@ namespace Autopujcovna.Models
 {
     class SeznamViewItem : Autopujcovna.ViewModels.Abstract.ViewModel
     {
-        private SeznamDataModel model;
-
-        public SeznamViewItem(SeznamDataModel seznamData)
+        public SeznamViewItem()
         {
-            model = seznamData;
+            
         }
 
         public string spz;

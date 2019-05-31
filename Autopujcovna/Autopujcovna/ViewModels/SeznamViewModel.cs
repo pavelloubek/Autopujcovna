@@ -15,13 +15,22 @@ namespace Autopujcovna.ViewModels
             Odebrat = new Command(Odebrat_e);
         }
 
+        // vím že data by neměli být ve viewmodelu
         private List<SeznamViewItem> seznamData;
 
         public Command Odebrat { get; private set; }
 
-        public static List<SeznamViewItem> VratData(List<SeznamViewItem> data)
+        public List<SeznamViewItem> SeznamData
         {
-            return data;
+            get => seznamData;
+            set
+            {
+                if (seznamData != value)
+                {
+                    seznamData = value;
+                    OnPropertyChanged(nameof(SeznamData));
+                }
+            }
         }
 
         private void Odebrat_e(object parameter)

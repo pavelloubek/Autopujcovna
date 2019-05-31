@@ -14,6 +14,15 @@ namespace Autopujcovna.ViewModels
         {
             Odebrat = new Command(Odebrat_e);
             UkazMain = new Command(UkazMain_e);
+
+            SeznamData = new List<SeznamViewItem>
+            {
+                new SeznamViewItem { jmeno = "jmeno1", spz = "spz1", vozidlo = "vozidlo1" },
+                new SeznamViewItem { jmeno = "jmeno2", spz = "spz2", vozidlo = "vozidlo2" },
+                new SeznamViewItem { jmeno = "jmeno3", spz = "spz3", vozidlo = "vozidlo3" },
+                new SeznamViewItem { jmeno = "jmeno4", spz = "spz4", vozidlo = "vozidlo4" },
+                new SeznamViewItem { jmeno = "jmeno5", spz = "spz5", vozidlo = "vozidlo5" }
+            };
         }
 
         // vím že data by neměli být ve viewmodelu

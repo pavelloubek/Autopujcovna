@@ -15,7 +15,14 @@ namespace Autopujcovna.ViewModels
             Odebrat = new Command(Odebrat_e);
         }
 
+        private List<SeznamViewItem> seznamData;
+
         public Command Odebrat { get; private set; }
+
+        public static List<SeznamViewItem> VratData(List<SeznamViewItem> data)
+        {
+            return data;
+        }
 
         private void Odebrat_e(object parameter)
         {

@@ -17,12 +17,12 @@ namespace Autopujcovna.ViewModels
         public Command UkazSeznam { get; private set; }
         public Command UkazPridat { get; private set; }
 
-        void UkazSeznam_e(object sender)
+        private void UkazSeznam_e()
         {
             App.Current.MainPage = new NavigationPage(new SeznamView());
         }
 
-        void UkazPridat_e(object sender)
+        private void UkazPridat_e()
         {
             App.Current.MainPage = new NavigationPage(new PridatView());
         }

@@ -12,15 +12,13 @@
                         <Label Text="{Binding SeznamJmeno}" FontAttributes="Bold" FontSize="Medium"/>
                         <Label Text="{Binding SeznamVozidlo}" FontSize="Small"/>
                         <Label Text="{Binding SeznamSPZ}" FontSize="Small"/>
-                        <Button Text="Odebrat" Command="{Binding Odebrat}" />
+                        <Button Text="Odebrat" Clicked="Odebrat_Clicked" />
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
-    </ListView>
-    <ContentPage.Content>
-        <StackLayout>
+        <ListView.Footer>
             <Button x:Name="BackToMainButton" Text="Back" Command="{Binding UkazMain}"/>
-        </StackLayout>
-    </ContentPage.Content>
+        </ListView.Footer>
+    </ListView>
 </ContentPage>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using Xamarin.Forms;
 using Autopujcovna.Views;
@@ -12,10 +13,9 @@ namespace Autopujcovna.ViewModels
     {
         public SeznamViewModel()
         {
-            Odebrat = new Command(Odebrat_e);
             UkazMain = new Command(UkazMain_e);
 
-            SeznamData = new List<SeznamViewItem>
+            SeznamData = new ObservableCollection<SeznamViewItem>
             {
                 new SeznamViewItem { jmeno = "jmeno1", spz = "spz1", vozidlo = "vozidlo1" },
                 new SeznamViewItem { jmeno = "jmeno2", spz = "spz2", vozidlo = "vozidlo2" },
@@ -26,11 +26,11 @@ namespace Autopujcovna.ViewModels
         }
 
         // vím že data by neměli být ve viewmodelu
-        private List<SeznamViewItem> seznamData;
-
-        public Command Odebrat { get; private set; }
+        // private List<SeznamViewItem> seznamData;
+        
         public Command UkazMain { get; private set; }
 
+        /*
         public List<SeznamViewItem> SeznamData
         {
             get => seznamData;
@@ -43,13 +43,18 @@ namespace Autopujcovna.ViewModels
                 }
             }
         }
+        */
 
-        private void Odebrat_e(object parameter)
+        public ObservableCollection<SeznamViewItem> SeznamData { get; set; }
+
+        public Command<SeznamViewItem> OdebratCommand
         {
-            var item = parameter as SeznamViewItem;
-            if (item != null)
+            get
             {
-                seznamData.Remove(item);
+                return new Command<SeznamViewItem>((item) =>
+                {
+                    SeznamData.Remove(item);
+                });
             }
         }
 

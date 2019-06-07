@@ -6,7 +6,7 @@
              BindingContext="{ViewModels:MainViewModel}"
              Title="Autopůjčovna">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout VerticalOptions="Center">
             <Button x:Name="MainSeznamButton" Text="Seznam" Command="{Binding UkazSeznam}"/>
             <Button x:Name="MainPridatButton" Text="Přidat" Command="{Binding UkazPridat}"/>
             <Button x:Name="NovyButton" Text="Nový" Command="{Binding NovySeznam}"/>

@@ -10,10 +10,9 @@
             <Label Text="Název vozidla:" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
             <Entry x:Name="NazevEntry" Text="{Binding EntryNazevVozidla, Mode=TwoWay}"/>
             <Label Text="SPZ:" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <Entry x:Name="SPZEntry" Text="{Binding EntrySPZ, Mode=TwoWay}"/>
+            <Entry x:Name="SPZEntry" Text="{Binding EntrySPZ, Mode=TwoWay}" MaxLength="7"/>
             <Label Text="Jméno půjčujícího:" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
             <Entry x:Name="JmenoEntry" Text="{Binding EntryJmeno, Mode=TwoWay}"/>
-            <!-- přidat pak i datumy -->
             <Button x:Name="PotvrditPridat" Text="Přidat" Command="{Binding PotvrditPridat}"/>
             <Button x:Name="UkazMain" Text="Zpět" Command="{Binding UkazMain}"/>
         </StackLayout>

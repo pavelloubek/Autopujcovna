@@ -66,7 +66,7 @@ namespace Autopujcovna.ViewModels
                         string jmeno = item.jmeno;
                         string spz = item.spz;
                         string vozidlo = item.vozidlo;
-                        streamWriter.WriteLine(jmeno + " " + spz + " " + vozidlo);
+                        streamWriter.WriteLine(jmeno + "§" + spz + "§" + vozidlo);
                     }
                     await Application.Current.MainPage.DisplayAlert("Info", "Váš seznam se uložil.", "OK");
                 }
@@ -84,7 +84,7 @@ namespace Autopujcovna.ViewModels
                     string line;
                     while ((line = streamReader.ReadLine()) != null)
                     {
-                        string[] slova = line.Split(' ');
+                        string[] slova = line.Split('§');
                         SeznamViewItem item = new SeznamViewItem { jmeno = slova[0], spz = slova[1], vozidlo = slova[2] };
                         ListData.Add(item);
                     }

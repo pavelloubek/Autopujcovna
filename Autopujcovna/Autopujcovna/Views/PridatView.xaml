@@ -1,18 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Autopujcovna.Views.PridatView">
+             x:Class="Autopujcovna.Views.PridatView"
+             xmlns:ViewModels="clr-namespace:Autopujcovna.ViewModels" 
+             BindingContext="{ViewModels:PridatViewModel}">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Název vozidla:" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <Entry Text="{Binding EntryNazevVozidla}"/>
+            <Entry x:Name="NazevEntry" Text="{Binding EntryNazevVozidla, Mode=TwoWay}"/>
             <Label Text="SPZ:" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <Entry Text="{Binding EntrySPZ}"/>
+            <Entry x:Name="SPZEntry" Text="{Binding EntrySPZ, Mode=TwoWay}"/>
             <Label Text="Jméno půjčujícího:" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            <Entry Text="{Binding EntryJmeno}"/>
+            <Entry x:Name="JmenoEntry" Text="{Binding EntryJmeno, Mode=TwoWay}"/>
             <!-- přidat pak i datumy -->
+            <Button x:Name="PotvrditPridat" Text="Přidat" Command="{Binding PotvrditPridat}"/>
             <Button x:Name="UkazMain" Text="Zpět" Command="{Binding UkazMain}"/>
-            <Button x:Name="PotvrditOdebrat" Text="Přidat" Command="{Binding PotvrditOdebrat}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

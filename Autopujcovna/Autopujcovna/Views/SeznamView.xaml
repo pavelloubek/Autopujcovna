@@ -4,7 +4,7 @@
              x:Class="Autopujcovna.Views.SeznamView"
              xmlns:ViewModels="clr-namespace:Autopujcovna.ViewModels" 
              BindingContext="{ViewModels:SeznamViewModel}">
-    <ListView HasUnevenRows="True" ItemsSource="{Binding SeznamData}" CachingStrategy="RecycleElement">
+    <ListView HasUnevenRows="True" ItemsSource="{Binding Data}" CachingStrategy="RecycleElement" BackgroundColor="White">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
@@ -12,7 +12,7 @@
                         <Label Text="{Binding SeznamJmeno}" FontAttributes="Bold" FontSize="Medium"/>
                         <Label Text="{Binding SeznamVozidlo}" FontSize="Small"/>
                         <Label Text="{Binding SeznamSPZ}" FontSize="Small"/>
-                        <Button Text="Odebrat" Clicked="Odebrat_Clicked" />
+                        <Button Text="Odebrat" Clicked="OdebratClicked" />
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>

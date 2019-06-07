@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Autopujcovna.Models;
+using Autopujcovna.ViewModels;
 
 namespace Autopujcovna.Views
 {
@@ -16,5 +18,5 @@ namespace Autopujcovna.Views
 		{
 			InitializeComponent ();
 		}
-	}
+    }
 }

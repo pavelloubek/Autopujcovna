@@ -15,53 +15,29 @@ namespace Autopujcovna.ViewModels
         {
             UkazMain = new Command(UkazMain_e);
 
-            SeznamData = new ObservableCollection<SeznamViewItem>
-            {
-                new SeznamViewItem { jmeno = "jmeno1", spz = "spz1", vozidlo = "vozidlo1" },
-                new SeznamViewItem { jmeno = "jmeno2", spz = "spz2", vozidlo = "vozidlo2" },
-                new SeznamViewItem { jmeno = "jmeno3", spz = "spz3", vozidlo = "vozidlo3" },
-                new SeznamViewItem { jmeno = "jmeno4", spz = "spz4", vozidlo = "vozidlo4" },
-                new SeznamViewItem { jmeno = "jmeno5", spz = "spz5", vozidlo = "vozidlo5" }
-            };
+            Data = new ObservableCollection<SeznamViewItem>(ListData);
         }
-
-        // vím že data by neměli být ve viewmodelu
-        // private List<SeznamViewItem> seznamData;
         
         public Command UkazMain { get; private set; }
+        
+        public List<SeznamViewItem> ListData { get { return SeznamData.seznamData.List; } set { SeznamData.seznamData.List = value; } }
 
-        /*
-        public List<SeznamViewItem> SeznamData
+        public ObservableCollection <SeznamViewItem> Data { get; set; }
+
+        void UkazMain_e(object sender)
         {
-            get => seznamData;
-            set
-            {
-                if (seznamData != value)
-                {
-                    seznamData = value;
-                    OnPropertyChanged(nameof(SeznamData));
-                }
-            }
+            App.Current.MainPage = new NavigationPage(new MainView());
         }
-        */
-
-        public ObservableCollection<SeznamViewItem> SeznamData { get; set; }
 
         public Command<SeznamViewItem> OdebratCommand
         {
             get
             {
-                return new Command<SeznamViewItem>((item) =>
-                {
-                    SeznamData.Remove(item);
+                return new Command<SeznamViewItem>((item) => {
+                    Data.Remove(item);
+                    ListData.Remove(item);
                 });
             }
-        }
-
-
-        void UkazMain_e(object sender)
-        {
-            App.Current.MainPage = new NavigationPage(new MainView());
         }
     }
 }

@@ -19,12 +19,16 @@ namespace Autopujcovna.Views
 			InitializeComponent ();
 		}
 
-        private void Odebrat_Clicked(object sender, EventArgs e)
+        async public void OdebratClicked(object sender, EventArgs e)
         {
-            var button = sender as Button;
-            var item = button.BindingContext as SeznamViewItem;
-            var viewModel = BindingContext as SeznamViewModel;
-            viewModel.OdebratCommand.Execute(item);
+            bool answer = await DisplayAlert("Pozor!", "Opravdu chcete odebrat položku?", "Ano", "Ne");
+            if (answer)
+            {
+                var button = sender as Button;
+                var item = button.BindingContext as SeznamViewItem;
+                var viewModel = BindingContext as SeznamViewModel;
+                viewModel.OdebratCommand.Execute(item);
+            }
         }
     }
 }

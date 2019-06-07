@@ -5,7 +5,6 @@ using Autopujcovna.Views;
 using Xamarin.Forms;
 using Autopujcovna.Models;
 using Autopujcovna.ViewModels;
-using Autopujcovna.Views;
 using System.IO;
 
 namespace Autopujcovna.ViewModels
@@ -42,7 +41,7 @@ namespace Autopujcovna.ViewModels
 
 
 
-        string filename = System.IO.Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "data.txt");
+        readonly string filename = System.IO.Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "data.txt");
 
         private async void NovySeznam_e()
         {

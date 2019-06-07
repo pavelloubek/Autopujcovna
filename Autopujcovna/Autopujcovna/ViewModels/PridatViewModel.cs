@@ -54,9 +54,23 @@ namespace Autopujcovna.ViewModels
                 await Application.Current.MainPage.DisplayAlert("Pozor!", "Máte nevyplněné políčko!", "OK");
                 return;
             }
+            if (EntrySPZ.Length < 7)
+            {
+                await Application.Current.MainPage.DisplayAlert("Pozor!", "Vaše SPZ neobsahuje 7 znaků!", "OK");
+                return;
+            }
+            foreach(SeznamViewItem item in SeznamData.seznamData.List)
+            {
+                if (item.spz == EntrySPZ)
+                {
+                    await Application.Current.MainPage.DisplayAlert("Pozor!", "Auto s touto SPZ již existuje!", "OK");
+                    return;
+                }
+            }
             SeznamViewItem item1 = new SeznamViewItem { jmeno = EntryJmeno, spz = EntrySPZ, vozidlo = EntryNazevVozidla };
             SeznamData.seznamData.List.Add(item1);
-            // Zde bych dal nějaký toast s informací o přidání, ale poměrně složitě se implementuje
+            // Zde bych dal nějaký toast s informací o přidání, ale poměrně složitě se implementuje, tak použiju alert
+            await Application.Current.MainPage.DisplayAlert("Info", "Přidali jste novou položku.", "OK");
         }
     }
 }

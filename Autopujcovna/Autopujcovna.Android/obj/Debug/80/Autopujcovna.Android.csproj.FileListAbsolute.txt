@@ -102,4 +102,6 @@ C:\Users\plpav\OneDrive\Plocha\X\PRG\Xamarin\Autopujcovna\Autopujcovna\Autopujco
 C:\Users\plpav\OneDrive\Plocha\X\PRG\Xamarin\Autopujcovna\Autopujcovna\Autopujcovna.Android\obj\Debug\80\android\assets\Xamarin.Forms.Core.pdb
 C:\Users\plpav\OneDrive\Plocha\X\PRG\Xamarin\Autopujcovna\Autopujcovna\Autopujcovna.Android\obj\Debug\80\android\assets\Xamarin.Forms.Platform.Android.pdb
 C:\Users\plpav\OneDrive\Plocha\X\PRG\Xamarin\Autopujcovna\Autopujcovna\Autopujcovna.Android\obj\Debug\80\android\assets\Xamarin.Forms.Xaml.pdb
+C:\Users\plpav\OneDrive\Plocha\X\PRG\Xamarin\Autopujcovna\Autopujcovna\Autopujcovna\bin\Debug\netstandard2.0\Autopujcovna.dll
+C:\Users\plpav\OneDrive\Plocha\X\PRG\Xamarin\Autopujcovna\Autopujcovna\Autopujcovna.Android\bin\Debug\Autopujcovna.dll.mdb
 C:\Users\plpav\OneDrive\Plocha\X\PRG\Xamarin\Autopujcovna\Autopujcovna\Autopujcovna.Android\obj\Debug\80\linksrc\Autopujcovna.dll.mdb

@@ -39,40 +39,58 @@ namespace Autopujcovna.ViewModels
             App.Current.MainPage = new NavigationPage(new PridatView());
         }
 
-        private void NovySeznam_e()
-        {
-            ListData = new List<SeznamViewItem>();
-        }
-        
+
+
+
         string filename = System.IO.Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "data.txt");
 
-        private void UlozitSeznam_e()
+        private async void NovySeznam_e()
         {
-            using (var streamWriter = new StreamWriter(filename, true))
+            bool answer = await Application.Current.MainPage.DisplayAlert("Pozor!", "Opravdu chcete vytvořit nový seznam? Tímto si vymažete aktuální seznam vozidel!", "Ano", "Ne");
+            if (answer)
             {
-                List<SeznamViewItem> listData = ListData;
-                foreach(SeznamViewItem item in listData)
+                ListData = new List<SeznamViewItem>();
+            }
+            await Application.Current.MainPage.DisplayAlert("Info", "Vytvořil se Vám nový seznam.", "OK");
+        }
+
+        private async void UlozitSeznam_e()
+        {
+            bool answer = await Application.Current.MainPage.DisplayAlert("Pozor!", "Opravdu chcete uložit seznam? Tímto si vymažete předešle uložený seznam vozidel!", "Ano", "Ne");
+            if (answer)
+            {
+                using (var streamWriter = new StreamWriter(filename))
                 {
-                    string jmeno = item.jmeno;
-                    string spz = item.spz;
-                    string vozidlo = item.vozidlo;
-                    streamWriter.WriteLine(jmeno + " " + spz + " " + vozidlo);
+                    List<SeznamViewItem> listData = ListData;
+                    foreach (SeznamViewItem item in listData)
+                    {
+                        string jmeno = item.jmeno;
+                        string spz = item.spz;
+                        string vozidlo = item.vozidlo;
+                        streamWriter.WriteLine(jmeno + " " + spz + " " + vozidlo);
+                    }
+                    await Application.Current.MainPage.DisplayAlert("Info", "Váš seznam se uložil.", "OK");
                 }
             }
         }
 
-        private void NacistSeznam_e()
+        private async void NacistSeznam_e()
         {
-            ListData = new List<SeznamViewItem>();
-            using (var streamReader = new StreamReader(filename))
+            bool answer = await Application.Current.MainPage.DisplayAlert("Pozor!", "Opravdu chcete načíst seznam? Tímto si vymažete aktuální seznam vozidel!", "Ano", "Ne");
+            if (answer)
             {
-                string line;
-                while((line = streamReader.ReadLine()) != null)
+                ListData = new List<SeznamViewItem>();
+                using (var streamReader = new StreamReader(filename))
                 {
-                    string[] slova = line.Split(' ');
-                    SeznamViewItem item = new SeznamViewItem { jmeno = slova[0], spz = slova[1], vozidlo = slova[2] };
-                    ListData.Add(item);
+                    string line;
+                    while ((line = streamReader.ReadLine()) != null)
+                    {
+                        string[] slova = line.Split(' ');
+                        SeznamViewItem item = new SeznamViewItem { jmeno = slova[0], spz = slova[1], vozidlo = slova[2] };
+                        ListData.Add(item);
+                    }
                 }
+                await Application.Current.MainPage.DisplayAlert("Info", "Váš seznam se načetl.", "OK");
             }
         }
     }

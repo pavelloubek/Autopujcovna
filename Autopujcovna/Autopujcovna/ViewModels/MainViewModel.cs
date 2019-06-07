@@ -66,11 +66,12 @@ namespace Autopujcovna.ViewModels
             ListData = new List<SeznamViewItem>();
             using (var streamReader = new StreamReader(filename))
             {
-                List<string> listData;
                 string line;
                 while((line = streamReader.ReadLine()) != null)
                 {
-
+                    string[] slova = line.Split(' ');
+                    SeznamViewItem item = new SeznamViewItem { jmeno = slova[0], spz = slova[1], vozidlo = slova[2] };
+                    ListData.Add(item);
                 }
             }
         }

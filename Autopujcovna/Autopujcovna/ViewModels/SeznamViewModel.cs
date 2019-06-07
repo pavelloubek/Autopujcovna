@@ -11,6 +11,7 @@ namespace Autopujcovna.ViewModels
 {
     class SeznamViewModel : Abstract.ViewModel
     {
+        // Konstruktor
         public SeznamViewModel()
         {
             UkazMain = new Command(UkazMain_e);
@@ -22,7 +23,7 @@ namespace Autopujcovna.ViewModels
         
         // Předání dat z modelu
         public List<SeznamViewItem> ListData { get { return SeznamData.seznamData.List; } set { SeznamData.seznamData.List = value; } }
-        // Zobrazení dat - nepředávám z listu, jelikož s observablecollection se lépe pracuje
+        // Zobrazení dat - nepředávám z listu, jelikož s observablecollection se lépe pracuje (obzvláště realtime)
         public ObservableCollection <SeznamViewItem> Data { get; set; }
 
         // Metoda pro přepnutí stránky

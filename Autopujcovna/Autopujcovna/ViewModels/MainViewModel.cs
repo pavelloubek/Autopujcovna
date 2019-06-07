@@ -11,6 +11,7 @@ namespace Autopujcovna.ViewModels
 {
     class MainViewModel : Abstract.ViewModel
     {
+        // Konstruktor
         public MainViewModel()
         {
             UkazSeznam = new Command(UkazSeznam_e);
@@ -20,19 +21,23 @@ namespace Autopujcovna.ViewModels
             NacistSeznam = new Command(NacistSeznam_e);
         }
 
+        // Definování commandů
         public Command UkazSeznam { get; private set; }
         public Command UkazPridat { get; private set; }
         public Command NovySeznam { get; private set; }
         public Command UlozitSeznam { get; private set; }
         public Command NacistSeznam { get; private set; }
 
+        // Získání dat z modelu
         public List<SeznamViewItem> ListData { get { return SeznamData.seznamData.List; } set { SeznamData.seznamData.List = value; } }
 
+        // Command pro ukázání seznamu
         private void UkazSeznam_e()
         {
             App.Current.MainPage = new NavigationPage(new SeznamView());
         }
 
+        // Command pro ukázání "přidat item"
         private void UkazPridat_e()
         {
             App.Current.MainPage = new NavigationPage(new PridatView());
@@ -40,9 +45,10 @@ namespace Autopujcovna.ViewModels
 
 
 
-
+        // Proměnná pro cestu k souboru na ukládání/načítání (Netrumfnul jsem si ukládání více souborů do mobilu dle uživatele, tak jsem raději použil statický data.txt)
         readonly string filename = System.IO.Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "data.txt");
 
+        // Command pro vyresetování seznamu
         private async void NovySeznam_e()
         {
             bool answer = await Application.Current.MainPage.DisplayAlert("Pozor!", "Opravdu chcete vytvořit nový seznam? Tímto si vymažete aktuální seznam vozidel!", "Ano", "Ne");
@@ -53,6 +59,7 @@ namespace Autopujcovna.ViewModels
             await Application.Current.MainPage.DisplayAlert("Info", "Vytvořil se Vám nový seznam.", "OK");
         }
 
+        // Command pro uložení seznamu
         private async void UlozitSeznam_e()
         {
             bool answer = await Application.Current.MainPage.DisplayAlert("Pozor!", "Opravdu chcete uložit seznam? Tímto si vymažete předešle uložený seznam vozidel!", "Ano", "Ne");
@@ -73,6 +80,7 @@ namespace Autopujcovna.ViewModels
             }
         }
 
+        // Command pro načtení seznamu
         private async void NacistSeznam_e()
         {
             bool answer = await Application.Current.MainPage.DisplayAlert("Pozor!", "Opravdu chcete načíst seznam? Tímto si vymažete aktuální seznam vozidel!", "Ano", "Ne");

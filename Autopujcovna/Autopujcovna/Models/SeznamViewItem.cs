@@ -11,6 +11,7 @@ namespace Autopujcovna.Models
             
         }
 
+        // Model itemu pro seznam
         public string spz;
         public string jmeno;
         public string vozidlo;

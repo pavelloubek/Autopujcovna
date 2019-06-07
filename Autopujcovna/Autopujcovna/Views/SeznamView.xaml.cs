@@ -20,7 +20,7 @@ namespace Autopujcovna.Views
 		}
 
 
-        // Musí být v code behind kvůli dostupnosti komponent + asynchronnímu alertu
+        // Musí být v code behind kvůli dostupnosti komponent - snažil jsem se přendat do MVVM, ale neúspěšně
         async public void OdebratClicked(object sender, EventArgs e)
         {
             bool answer = await DisplayAlert("Pozor!", "Opravdu chcete odebrat položku?", "Ano", "Ne");

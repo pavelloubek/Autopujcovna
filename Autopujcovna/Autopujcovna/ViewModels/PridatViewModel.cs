@@ -46,6 +46,7 @@ namespace Autopujcovna.ViewModels
             App.Current.MainPage = new NavigationPage(new MainView());
         }
 
+        // Přidá item do seznamu
         async void PotvrditPridat_e(object sender)
         {
             if (EntryJmeno == "" || EntryNazevVozidla == "" || EntrySPZ == "")
@@ -55,6 +56,7 @@ namespace Autopujcovna.ViewModels
             }
             SeznamViewItem item1 = new SeznamViewItem { jmeno = EntryJmeno, spz = EntrySPZ, vozidlo = EntryNazevVozidla };
             SeznamData.seznamData.List.Add(item1);
+            // Zde bych dal nějaký toast s informací o přidání, ale poměrně složitě se implementuje
         }
     }
 }

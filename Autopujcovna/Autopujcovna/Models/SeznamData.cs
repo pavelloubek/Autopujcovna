@@ -7,7 +7,7 @@ namespace Autopujcovna.Models
 {
     class SeznamData
     {
-
+        // Data seznamu
         public static SeznamData seznamData = new SeznamData();
 
         protected List<SeznamViewItem> list;

@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Autopujcovna.Views.PridatView"
              xmlns:ViewModels="clr-namespace:Autopujcovna.ViewModels" 
-             BindingContext="{ViewModels:PridatViewModel}">
+             BindingContext="{ViewModels:PridatViewModel}"
+             Title="Autopůjčovna">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Název vozidla:" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />

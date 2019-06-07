@@ -3,11 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Autopujcovna.Views.MainView"
              xmlns:ViewModels="clr-namespace:Autopujcovna.ViewModels" 
-             BindingContext="{ViewModels:MainViewModel}">
+             BindingContext="{ViewModels:MainViewModel}"
+             Title="Autopůjčovna">
     <ContentPage.Content>
         <StackLayout>
             <Button x:Name="MainSeznamButton" Text="Seznam" Command="{Binding UkazSeznam}"/>
             <Button x:Name="MainPridatButton" Text="Přidat" Command="{Binding UkazPridat}"/>
+            <Button x:Name="NovyButton" Text="Nový" Command="{Binding NovySeznam}"/>
+            <Button x:Name="UlozitButton" Text="Uložit" Command="{Binding UlozitSeznam}"/>
+            <Button x:Name="NacistButton" Text="Načíst" Command="{Binding NacistSeznam}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

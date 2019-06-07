@@ -19,6 +19,8 @@ namespace Autopujcovna.Views
 			InitializeComponent ();
 		}
 
+
+        // Musí být v code behind kvůli dostupnosti komponent + asynchronnímu alertu
         async public void OdebratClicked(object sender, EventArgs e)
         {
             bool answer = await DisplayAlert("Pozor!", "Opravdu chcete odebrat položku?", "Ano", "Ne");
